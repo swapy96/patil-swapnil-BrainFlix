@@ -1,0 +1,16 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/font' as *;
+
+.video-list{
+    padding: 0 1.6rem 1.6rem;
+    // @include desktop{
+        
+    //     padding-right: 14rem;
+    //     }
+    &__title{
+        @include font(1.3rem, 1.8rem, 500);
+        color: $color-Secondary-text;
+        padding-bottom: 1.6rem;
+    }
+}

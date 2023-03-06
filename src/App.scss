@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@use 'styles/partials/variables' as *;
+@use 'styles/partials/mixins' as *;
+@use 'styles/partials/font' as *;
+
+
+/* Box sizing rules*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Remove default margin */
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+//reset root font size to 10px-- now 1rem =10px
+html{
+    font-size: 10px;
+}
+body{
+    max-width: 76.7rem;
+    min-width: 32.0rem;
+    margin: auto;
+    font-family:"AvenirNext LT Pro", 'Times New Roman', Times, serif;
+
+    @include tablet{
+        max-width: 127.9rem;
+        min-width: 76.8rem;
+        margin: 0 auto;
+    }
+    @include desktop{
+        max-width: 240.9rem;
+        min-width: 127.9rem;
+        margin: 0 auto;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Remove list styles on ul*/
+
+ul[role="list"] {
+    list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+//some utility classes to reduce repitition
+//1] UT CLASS padding in mobile design
+.mo-padding{
+    padding: 1.6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+//desktop padding
+.td-padding{
+    padding:0 3.6rem 0 3.6rem;
 }
 
-.App-link {
-  color: #61dafb;
+//2] UT CLASS-page header and section header -type kit
+.mo-text-style{
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mo-demi-style{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+
+}
+
+.mo-body-text-style{
+    
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+
+}
+//ut class for tablet and desktop text style
+.td-pheader-bstyle{
+    font-size: 6rem;
+    line-height: 6.8rem;
+    font-weight: 700;
+}
+
+.td-sheader-bstyle{
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    font-weight: 700;
+}
+
+.td-subsheader-dstyle{
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+}
+    
+.td-btext-style{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+}
+.td-fttext-style{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+.container{
+    @include desktop{
+        display: flex;
+    }
+}
+.main{
+    @include desktop{
+        max-width: 70%;
+    }
+}
+.aside{
+    @include desktop{
+        margin-top: 4rem;
+        max-width: 70%;
+        border-left: 2px solid $color-Secondary-text;
+    }
 }

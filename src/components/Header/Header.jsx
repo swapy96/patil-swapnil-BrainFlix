@@ -1,20 +1,32 @@
-import React from 'react'
+import React from 'react' 
+import logo from '../../assets/images/logo/BrainFlix-logo.svg'
+import avatar from '../../assets/images/Mohan-muruge.jpg'
+import './Header.scss';  
+
 
 function Header() {
-  return (
-    <Header>
-        <div className='logo'>logo</div>
-        <div class='container'>
-            <div class='search'>
-            <div>input</div>
-            <div id='btn'>button</div>
+  return(
+    <header className='header'>
+      <div className='header-container'>
+        <div className='header-container__logo-wrapper'>
+          
+          <img className='header-container__logo' src={logo} alt="BrainFlix logo" />
+          
+        </div>
+        <div className='ip-up-av-wrapper'>
+            <div className='ip-up-av-wrapper__sub-wrapper'>
+                <div className='ip-up-av-wrapper__ip-av-container'>
+                  <input className='ip-up-av-wrapper__input' type="text" placeholder='Search' />
+                  <img className='avatar-mobile-view' src={avatar} alt="avatar" />
+
+                </div>
+                <button className='btn' type="submit">UPLOAD</button>
+            </div>
+            <img className='avatar-tablet-view' src={avatar} alt="avatar" />
+        </div>
       </div>
-      <div class='avatar'>avatar</div>
-</div>
-
-
-    </Header>
-  )
+    </header>
+  );
 }
 
 export default Header

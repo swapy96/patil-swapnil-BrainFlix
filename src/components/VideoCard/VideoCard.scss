@@ -1,0 +1,46 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/font' as *;
+
+.VideoCard{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 0.8rem;
+    max-width: 35rem;
+    margin: 0 auto;
+    @include desktop{
+        max-width: 50rem;
+        // margin-right: 14rem;
+        }
+    // width: 32rem;
+    &__thumbnail{
+        width: 35%;
+
+    }
+    &__description{
+        width: 65%;
+        padding-left: 1.6rem;
+    }
+    &__img{
+        
+        border-radius: 0.4rem;
+        width: 100%;
+        height: 6rem;
+    }
+    &__title{
+        @include font(1.2rem, 2.0rem, 700);
+        @include tablet{
+            @include font(1.4rem, 2.2rem, 700);
+        }
+        
+    }
+    &__channel{
+        @include font(1.3rem, 2.0rem, 400);
+        margin-top: 0.5rem;
+        @include tablet{
+            @include font(1.4rem, 2.2rem, 400);
+        }
+
+    }
+    
+}

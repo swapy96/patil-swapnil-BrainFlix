@@ -1,0 +1,19 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/font' as *;
+.video-Section{
+    background-color: $color-video-compo-color;
+}
+.video-player-container{
+    max-width: 68.5rem;
+    margin: 0 auto;
+    &__video-player{
+    width: 100%;
+    }
+
+    @include desktop{
+        
+        padding: 0rem 8rem 0;
+        max-width: 100rem;
+    }
+}

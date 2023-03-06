@@ -1,0 +1,157 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/font' as *;
+
+.communication{
+    padding: 0 1.6rem;
+    @include tablet{
+        @include font(1.4rem, 2.2rem, 400);
+        padding: 0 2.4rem;
+    }
+    @include desktop{
+        padding-right: 0;
+        padding-left: 14rem;
+    
+    }
+    &__comment-count{
+        @include font(1.3rem, 1.8rem, 500);
+        padding-bottom: 1.6rem;
+        @include tablet{
+            @include font(1.4rem, 2.2rem, 500);
+            padding-bottom: 2.4rem;
+        }
+
+    }
+    &__heading{
+        @include font(1.2rem, 2.0rem, 500);
+        color: $color-Secondary-text;
+    }
+
+}
+.form{
+    display: flex;
+    &__ta-comment{
+        width:-webkit-fill-available;
+        max-height: 10rem;
+        padding: 1rem;
+        margin-bottom: 1.6rem;
+        background-color: $color-secondary-light;
+        border: 2px solid $color-secondary-mercury;
+        border-radius: 0.4rem;
+        @include tablet{
+            @include font(1.4rem, 2.2rem, 400);
+            max-height: 4.2rem;
+        }
+    }
+}
+
+.post{
+    padding: 0 1.6rem;
+    @include desktop{
+        padding-right: 0;
+        padding-left: 14rem;
+    }
+    &__wrapper{
+        padding: 1rem 0;
+    }
+    &__list{
+        list-style: none;
+        margin-bottom: 1.6rem;
+    }
+    &__item{
+        border-bottom: 1px solid $color-Secondary-text;
+        border-top: 1px solid $color-Secondary-text;
+        display: flex;
+    }
+
+    &__name-dt-contatiner{
+        display: flex;
+        justify-content: space-between
+    }
+    &__name{
+        @include font(1.3rem, 1.8rem, 500);
+        @include tablet{
+            @include font(1.4rem, 2.2rem, 500);
+            
+        }
+
+    }
+    &__date{
+        @include font(1.3rem, 1.8rem, 400);
+        color: $color-Secondary-text;
+        @include tablet{
+            @include font(1.4rem, 2.2rem, 400);
+            
+        }
+        @include desktop{
+            padding-right: 1.6rem;
+        }
+    }
+    &__comment{
+        @include font(1.3rem, 1.8rem, 400);
+        margin-top: 1rem;
+        @include tablet{
+            @include font(1.4rem, 2.2rem, 400);
+            
+        }
+        @include desktop{
+            padding-right: 1.6rem;
+        }
+        
+
+    }
+}
+
+.avatar-mobile-view--comment{
+    max-width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    margin: 1.6rem 1.6rem 0 0;
+
+       
+}
+
+.btn-comment{
+    width: 100%;
+    height: 4rem;
+    background-color: $color-primary-inactive;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+    border-radius: 0.4rem;
+    color: $color-primary-light;
+    border-style: none;
+    background-image: url('../../assets/images/icon/upload.svg');
+    background-position: 7px 7px;
+    background-repeat: no-repeat;
+    @include tablet{
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        width: 15rem;
+        padding: 0 8rem;
+
+    }
+    &:hover{
+        background-color: $color-secondary-dark;
+    }
+    
+    &--tb{
+        background-image: url('../../assets/images/icon/add_comment.svg');
+        background-position: 7px 7px;
+        background-repeat: no-repeat;
+        @include tablet{
+            position: relative;
+            left: 50rem;
+            bottom: 6.5rem;
+            
+        background-image: url('../../assets/images/icon/add_comment.svg');
+        background-position: 7px 7px;
+        background-repeat: no-repeat;
+            
+        }
+    }
+
+
+}
+

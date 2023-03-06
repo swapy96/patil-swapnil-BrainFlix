@@ -1,0 +1,118 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/font' as *;
+
+
+// .header{
+//     display: flex;
+//     justify-content: space-between;
+// }
+.header-container{
+    padding: 1.6rem 1.6rem 0;
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+        padding: 1.8rem 2.4rem;
+    }
+    @include desktop{
+        
+    padding: 1.6rem 14rem 1.8rem;
+    }
+    
+    &__logo-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    &__logo{
+        max-height: 2.5rem;
+        max-width: 12.5rem;
+        margin-bottom: 1.6rem;
+        @include tablet{
+            margin-bottom: 0;
+        }
+    }
+}
+.ip-up-av-wrapper{
+    @include tablet{
+        display: flex;
+        // justify-content: space-between;
+    
+    }
+    &__sub-wrapper{
+        @include tablet{
+            display: flex; 
+            width: 450px;       
+        }
+        
+    }
+    &__ip-av-container{
+        width: 100%;
+        display: flex;
+        margin-bottom: 1.6rem;
+        @include tablet{
+            margin-bottom: 0;
+            justify-content: center;
+        }
+
+    }
+    &__input{
+        width: 80%;
+        border: 1px solid $color-secondary-mercury;
+        border-radius: 0.4rem;
+        background: url('../../assets/images/icon/search.svg') no-repeat scroll 5px 5px;
+        padding-left:30px;
+    }
+}
+.btn{
+    width: 100%;
+    height: 4rem;
+    background-color: $color-primary-inactive;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+    border-radius: 0.4rem;
+    color: $color-primary-light;
+    border-style: none;
+    background-image: url('../../assets/images/icon/upload.svg');
+    background-position: 7px 7px;
+    background-repeat: no-repeat;
+    @include tablet{
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        width: 15rem;
+        padding: 0 8rem;
+
+    }
+    &:hover{
+        background-color: $color-secondary-dark;
+    }
+    
+
+
+}
+.avatar-mobile-view{
+    max-width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    margin-left: 1.6rem;
+    @include tablet{
+        display: none;
+    }
+    
+}
+.avatar-tablet-view{
+    max-width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    display: none;
+    @include tablet{
+        display:inline-flex;
+        margin-left:1.6rem;
+        max-width: 4rem;
+        height: 4rem;
+    }
+}
+
+
