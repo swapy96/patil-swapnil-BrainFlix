@@ -1,4 +1,5 @@
 import React from 'react' 
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/BrainFlix-logo.svg'
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 import './Header.scss';  
@@ -10,7 +11,7 @@ function Header() {
       <div className='header-container'>
         <div className='header-container__logo-wrapper'>
           
-          <img className='header-container__logo' src={logo} alt="BrainFlix logo" />
+          <Link to={'/'}><img className='header-container__logo' src={logo} alt="BrainFlix logo" /></Link>
           
         </div>
         <div className='ip-up-av-wrapper'>
@@ -20,7 +21,7 @@ function Header() {
                   <img className='avatar-mobile-view' src={avatar} alt="avatar" />
 
                 </div>
-                <button className='btn' type="submit">UPLOAD</button>
+                <Link to={'/upload'}><button className='btn' type="submit">UPLOAD</button></Link>
             </div>
             <img className='avatar-tablet-view' src={avatar} alt="avatar" />
         </div>

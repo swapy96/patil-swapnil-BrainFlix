@@ -5,9 +5,8 @@ import './Comments.scss'
 
 function Comments(props) {
 
-
-
-    new Date(props.videoData[0].comments[2].timestamp).toLocaleDateString();
+    // let commentsArray=videoData[0].comments
+    // console.log('inside the Comments jsx',commentsArray)
   return (
     <section>
         <div className="communication">

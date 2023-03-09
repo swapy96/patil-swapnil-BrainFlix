@@ -1,0 +1,64 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/font' as *;
+
+.upload-form{
+    border-top:3px solid $color-secondary-mercury;
+
+    padding: 2.4rem 1.6rem 1.6rem;
+    @include tablet{
+        padding: 3.6rem 2.4rem 2.4rem;
+    }
+    @include desktop{
+        
+        
+        padding: 3.6rem 14rem 0;
+    }
+    @include desktop{
+        padding-right: 0;
+    }
+    &__heading{
+        @include font(2.4rem,3.2rem, 700);
+        padding-bottom: 1.6rem;
+        @include tablet{
+            @include font(3.3rem, 4.4rem, 700);
+            padding-bottom: 2.4rem;
+        }
+    }
+    &__form-element-wrapper{
+        border-top:2px solid $color-secondary-mercury;
+        border-bottom:2px solid $color-secondary-mercury;
+        margin-bottom: 1.6rem;
+    }
+    &__img-container{
+        width: 100%;
+    }
+    &__thumbnail-img{
+        
+        border-radius: 0.4rem;
+        width: 100%;
+        height: 16rem;
+    }
+    &__form-lable{
+        @include font(1rem, 2.0rem, 500);
+        color: $color-Secondary-text;
+        padding-top: 1.6rem;
+
+
+    }
+    &__textarea{
+        margin-bottom: 1.6rem;
+        border-radius: 0.4rem;
+        border-color: $color-secondary-mercury;
+    }
+    &__inputbox{
+        border-radius: 0.4rem;
+        border-color: $color-secondary-mercury;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
