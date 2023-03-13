@@ -28,14 +28,16 @@
         height: 6rem;
     }
     &__title{
-        @include font(1.2rem, 2.0rem, 700);
+        @include font(1.2rem, 2.0rem, 500);
+        color: $color-primary-dark;
         @include tablet{
-            @include font(1.4rem, 2.2rem, 700);
+            @include font(1.4rem, 2.2rem, 500);
         }
         
     }
     &__channel{
         @include font(1.3rem, 2.0rem, 400);
+        color: $color-primary-dark;
         margin-top: 0.5rem;
         @include tablet{
             @include font(1.4rem, 2.2rem, 400);

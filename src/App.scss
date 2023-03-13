@@ -108,6 +108,7 @@ ul[role="list"] {
 .container{
     @include desktop{
         display: flex;
+        padding-right: 14rem;
     }
 }
 .main{

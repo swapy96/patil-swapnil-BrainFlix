@@ -12,9 +12,11 @@ function App() {
           <Routes>
 
                 <Route path="/" element={<Home />} />  
-                <Route path="/upload" element={<UploadForm/>} />  
+                <Route path="/videos/:id" element={<Home />} />  
+                <Route path="/Upload" element={<UploadForm/>} />  
                 {/* not found path */}
-                <Route path="*" element={<PageNotFound/>} />  
+                <Route path="*" element={<PageNotFound />} />  
+                <Route path={`/videos/*`} element={<PageNotFound />} />  
 
           </Routes>        
         </BrowserRouter>  

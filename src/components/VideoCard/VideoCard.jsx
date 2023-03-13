@@ -1,9 +1,9 @@
 import './VideoCard.scss';
 
-function VideoCard({singleVideo, handleVideoClick}) {
+function VideoCard({singleVideo}) {
 	
 	return (
-		<div className='VideoCard' onClick={()=>{handleVideoClick(singleVideo.id)}}>
+		<div className='VideoCard'>
 			<div className='VideoCard__thumbnail'>
 				<img className='VideoCard__img' src={singleVideo.image} alt={singleVideo.title} />
 			</div>

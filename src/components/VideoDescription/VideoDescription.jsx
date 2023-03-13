@@ -5,7 +5,7 @@ import viewsIcon from '../../assets/images/icon/views.svg'
 
 
 function VideoDescription({selectedVideo}) {
-    console.log(selectedVideo)
+    
   return (
     <section>
         <div className='video-description'>

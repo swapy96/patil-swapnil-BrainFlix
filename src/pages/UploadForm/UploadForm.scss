@@ -14,9 +14,6 @@
         
         padding: 3.6rem 14rem 0;
     }
-    @include desktop{
-        padding-right: 0;
-    }
     &__heading{
         @include font(2.4rem,3.2rem, 700);
         padding-bottom: 1.6rem;
@@ -26,21 +23,41 @@
         }
     }
     &__form-element-wrapper{
+        margin-bottom: 1.6rem;
+        @include tablet{
+            
         border-top:2px solid $color-secondary-mercury;
         border-bottom:2px solid $color-secondary-mercury;
-        margin-bottom: 1.6rem;
+
+        }
+        @include desktop{
+            display: flex;
+        }
     }
     &__img-container{
         width: 100%;
+        @include desktop{
+            max-width: 30%;
+            padding-bottom:2.4rem;
+        }
+
     }
     &__thumbnail-img{
         
         border-radius: 0.4rem;
         width: 100%;
         height: 16rem;
+        @include tablet{
+            width: 50%;
+            height:auto;
+            background-color: $color-secondary-mercury;
+        }
+        @include desktop{
+            width: 100%
+        }
     }
     &__form-lable{
-        @include font(1rem, 2.0rem, 500);
+        @include font(1.2rem, 2.0rem, 500);
         color: $color-Secondary-text;
         padding-top: 1.6rem;
 
@@ -50,15 +67,58 @@
         margin-bottom: 1.6rem;
         border-radius: 0.4rem;
         border-color: $color-secondary-mercury;
+        @include font(1.3rem, 2.0rem, 400);
+        padding: 1.2rem;
+        border: 2px solid $color-secondary-mercury;
+        background-color: $color-secondary-light;
+        
+        
     }
     &__inputbox{
+        height: 3.8rem;
+        @include font(1.3rem, 2.0rem, 400);
+        padding: 1.2rem;
         border-radius: 0.4rem;
-        border-color: $color-secondary-mercury;
+        background-color: $color-secondary-light;
+        border: 2px solid $color-secondary-mercury;
+
     }
     &__form{
         display: flex;
         flex-direction: column;
+        @include desktop{
+            width:70%;
+            margin-left: 2.4rem;
+        }
     }
+
+}
+
+.btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row-reverse;
+        gap:5rem;
+    }
+}
+
+.btn-publish{
+    @include btn;
+    
+  background-image: url('../../assets/images/icon/publish.svg');
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  @include tablet{
+    width: 15.2rem;
+    padding: 0px 5rem;
+  }
+
+}
+.btn-cancel{
+    @include btn;
+    background-color: white;
+    color: $color-primary-inactive;
 
 }
 
