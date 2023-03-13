@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import UploadForm from './pages/UploadForm/UploadForm';
 import Header from './components/Header/Header';
@@ -12,9 +12,9 @@ function App() {
           <Routes>
 
                 <Route path="/" element={<Home />} />  
+                <Route path="/home" element={<Navigate to={"/"} />} />  
                 <Route path="/videos/:id" element={<Home />} />  
                 <Route path="/Upload" element={<UploadForm/>} />  
-                {/* not found path */}
                 <Route path="*" element={<PageNotFound />} />  
                 <Route path={`/videos/*`} element={<PageNotFound />} />  
 

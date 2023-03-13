@@ -4,6 +4,7 @@ import commentAvatar from '../../assets/images/icon/avatar.png'
 import './Comments.scss'
 
 function Comments({selectedVideoComments}) {
+    
   return (
     <section>
         <div className="communication">
@@ -19,7 +20,7 @@ function Comments({selectedVideoComments}) {
                     <h2 className="communication__heading">JOIN THE CONVERSATION</h2>
                     <textarea className="form__ta-comment" name="comment" id="comment" cols="30" rows="10" placeholder="Add a new comment"></textarea>
         
-                    <button type="submit" className="btn-comment btn-comment--tb">COMMENT</button>
+                    <button type="submit" onClick={(e)=>{e.preventDefault();}} className="btn-comment btn-comment--tb">COMMENT</button>
                
                </div>
             </form>              

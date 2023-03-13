@@ -113,6 +113,9 @@
     width: 15.2rem;
     padding: 0px 5rem;
   }
+  &:hover{
+    background-color: $color-secondary-dark;
+  }
 
 }
 .btn-cancel{

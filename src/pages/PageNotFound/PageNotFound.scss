@@ -1,0 +1,14 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/font' as *;
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid $color-primary-dark;
+    font-size: 3rem;
+    color: red;
+    padding: 2.4rem;
+}
