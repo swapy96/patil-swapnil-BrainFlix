@@ -36,7 +36,7 @@ function UploadForm() {
     axios
       .post(`${api}/videos`, video)
       .then((response) => {
-        console.log("post request sent");
+        console.log("post request sent to server");
       })
       .catch((err) => {
         console.log(err);
